@@ -36,7 +36,7 @@ searcher.processResults = function(results) {
     var ratio = result.height / result.width;
     var img = document.createElement("img");
     img.src = result.url;
-    img.width = 500;
+    img.width = 600;
     img.height = img.width * ratio;
     resultArea.appendChild(img);
   }
