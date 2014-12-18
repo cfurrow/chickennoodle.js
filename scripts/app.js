@@ -1,5 +1,5 @@
 var googleImageSearch = new google.search.ImageSearch();
-googleImageSearch.setResultSetSize(8);
+googleImageSearch.setResultSetSize(8); // 8 per page is max
 var searcher = new ImageSearcher();
 var done = false;
 
@@ -16,21 +16,12 @@ var doGoogleImageSearch = function(query) {
   googleImageSearch.execute(query);
 }
 
-// searcher.processResult = function(result) {
-//   var resultArea = document.getElementById("result");
-//   var img = document.createElement("img");
-//   var ratio = result.height / result.width;
-//   img.src = result.url;
-//   img.width = 500;
-//   img.height = img.width * ratio;
-//   resultArea.appendChild(img);
-// };
-
 searcher.processResults = function(results) {
   var resultArea = document.getElementById("result");
-  resultArea.innerHTML = '';
   var len = results.length;
   var i = 0;
+
+  resultArea.innerHTML = '';
   for(; i < len; i++) {
     var result = results[i];
     var ratio = result.height / result.width;
