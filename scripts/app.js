@@ -14,7 +14,7 @@
       var result = results[i];
       var resizeRatio = null;
       var maxWidth = 600;
-      var img = document.createElement("img");      
+      var img = document.createElement("img");
       resizeRatio = maxWidth / result.width;
 
       img.src = result.url;
@@ -35,7 +35,6 @@
     }
     googleImageSearch.setSearchCompleteCallback(this, doneSearching, null);
     googleImageSearch.execute(query);
-
   }
 
   performGoogleImageSearch("chicken noodle soup")
