@@ -12,11 +12,14 @@
     resultArea.innerHTML = '';
     for(; i < len; i++) {
       var result = results[i];
-      var ratio = result.height / result.width;
+      var resizeRatio = null;
+      var maxWidth = 600;
       var img = document.createElement("img");
       img.src = result.url;
-      img.width = 600;
-      img.height = img.width * ratio;
+      resizeRatio = maxWidth / result.width;
+
+      img.width = result.width * resizeRatio;
+      img.height = result.height * resizeRatio;
       resultArea.appendChild(img);
     }
   };
