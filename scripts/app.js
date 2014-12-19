@@ -14,10 +14,10 @@
       var result = results[i];
       var resizeRatio = null;
       var maxWidth = 600;
-      var img = document.createElement("img");
-      img.src = result.url;
+      var img = document.createElement("img");      
       resizeRatio = maxWidth / result.width;
 
+      img.src = result.url;
       img.width = result.width * resizeRatio;
       img.height = result.height * resizeRatio;
       resultArea.appendChild(img);
